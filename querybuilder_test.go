@@ -28,7 +28,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : int(10),
 		}
 		expected := "x=10"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -39,7 +39,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : &i,
 		}
 		expected := "x=10"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -50,7 +50,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : nilInt,
 		}
 		expected := ""
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -60,7 +60,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : int8(10),
 		}
 		expected := "x=10"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -71,7 +71,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : &i,
 		}
 		expected := "x=10"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -86,7 +86,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : &ptrPtr,
 		}
 		expected := "x=10"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -97,7 +97,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : nilInt8,
 		}
 		expected := ""
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -111,7 +111,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : &float32s,
 		}
 		expected := "x=10%2C20"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -127,7 +127,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : &float64s,
 		}
 		expected := "x=10%2C20"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -139,7 +139,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : typedInt,
 		}
 		expected := "x=10"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -152,7 +152,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : myFloats,
 		}
 		expected := "x=works+QueryString"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -166,7 +166,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : &typedInt,
 		}
 		expected := ""
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -178,7 +178,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : myInt,
 		}
 		expected := ""
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 
@@ -191,7 +191,7 @@ func TestBuildFromMap3(t *testing.T) {
 			"x" : myFloats,
 		}
 		expected := "x=works+QueryString"
-		actual := Build(testdata, New()).Encode()
+		actual := Build(testdata).Encode()
 		assert.Equal(t, expected, actual)
 	}()
 

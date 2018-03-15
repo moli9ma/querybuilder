@@ -199,8 +199,8 @@ func (parser *Parser) SetSliceTypeParsers(parseStrings func(values []string) str
 	parser.ParseFloat64s = parseFloat64s
 }
 
-// New default customTypeParser
-func New() Parser {
+// NewParser default customTypeParser
+func NewParser() Parser {
 
 	var parseString = func(value string) string {
 		return value

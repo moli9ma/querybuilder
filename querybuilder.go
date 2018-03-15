@@ -13,7 +13,12 @@ type QueryBuilder interface {
 }
 
 // Build
-func Build(data map[string]interface{}, parser Parser) url.Values {
+func Build(data map[string]interface{}) url.Values {
+	return build(data, NewParser())
+}
+
+// Build
+func BuildWithCustomParser(data map[string]interface{}, parser Parser) url.Values {
 	return build(data, parser)
 }
 
